@@ -7,51 +7,41 @@ This project is an open-source **AI-powered question answering system** designed
 ---
 
 ## 🏗️ System Architecture
-----------------------------------------------------------------------------------------------------
 
-┌──────────────────────────────┐
-│ Document Upload + Query Input│
-└────────────┬─────────────────┘
-▼
+---------------------------------------------------------------------------------------------------
+a. FMCG_PROJECT/
+  Main project directory.
 
-┌──────────────────────────────┐
-│ Data Loader (Excel Parser) │
-│ └── src/data_loader.py │
-└────────────┬─────────────────┘
-▼
+b. Data/
+  Contains the input Excel files:
+    - Forcast.xlsx
+    - Updated_Main_Data.xlsx
 
-┌──────────────────────────────┐
-│ TF-IDF Vectorizer + Retriever│
-│ └── src/vectorizer.py │
-│ └── src/retriever.py │
-└────────────┬─────────────────┘
-▼
+c. src/
+  Contains source code modules:
+    - __init__.py – Initializes the package
+    - data_loader.py – Loads and cleans Excel data
+    - vectorizer.py – Implements TF-IDF vectorization
+    - retriever.py – Computes cosine similarity for retrieval
+    - llm_answer.py – Generates paragraph-style answers using an open-source LLM
+    - utils.py – Common preprocessing utilities
 
-┌──────────────────────────────┐
-│ LLM-Based Answer Generator │
-│ └── src/llm_answer.py │
-└────────────┬─────────────────┘
+d. streamlit_app.py
+  Main Streamlit UI for document upload and answering user queries.
 
-----------------------------------------------------------------------------------------------------
+e. requirements.txt
+  Lists all required Python packages and dependencies.
+
+f. README.md
+  Provides an overview, setup instructions, and usage guide for the project.
 
 
-    FMCG_PROJECT/
-│
-├── Data/
-│   └── Forcast.xlsx
-│   └── Updated_Main_Data.xlsx
-│
-├── src/
-│   ├── __init__.py
-│   ├── data_loader.py         # For loading and cleaning data
-│   ├── vectorizer.py          # TF-IDF logic
-│   ├── retriever.py           # Cosine similarity logic
-│   ├── llm_answer.py          # LLM for paragraph-style answering
-│   └── utils.py               # Reusable preprocessing utilities
-│
-├── streamlit_app.py           # Streamlit UI app
-├── requirements.txt
-└── README.md
 
-**Note : stewart.ipynb for practise**
+Execution Flow:
+1. Document Upload + Query Input  →  streamlit_app.py
+2. Data Loading & Cleaning        →  src/data_loader.py
+3. Vectorization                  →  src/vectorizer.py
+4. Document Retrieval             →  src/retriever.py
+5. LLM-based Answer Generation    →  src/llm_answer.py
 
+Note : stewart.ipynb for practise
