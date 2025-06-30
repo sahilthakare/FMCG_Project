@@ -13,17 +13,20 @@ This project is an open-source **AI-powered question answering system** designed
 │ Document Upload + Query Input│
 └────────────┬─────────────────┘
 ▼
+
 ┌──────────────────────────────┐
 │ Data Loader (Excel Parser) │
 │ └── src/data_loader.py │
 └────────────┬─────────────────┘
 ▼
+
 ┌──────────────────────────────┐
 │ TF-IDF Vectorizer + Retriever│
 │ └── src/vectorizer.py │
 │ └── src/retriever.py │
 └────────────┬─────────────────┘
 ▼
+
 ┌──────────────────────────────┐
 │ LLM-Based Answer Generator │
 │ └── src/llm_answer.py │
