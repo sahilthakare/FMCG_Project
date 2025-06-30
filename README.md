@@ -9,31 +9,23 @@ This project is an open-source **AI-powered question answering system** designed
 ## 🏗️ System Architecture
 
 ---------------------------------------------------------------------------------------------------
-a. FMCG_PROJECT/
-  Main project directory.
+a. FMCG_PROJECT/: Main project directory.
 
-b. Data/
-  Contains the input Excel files:
-    - Forcast.xlsx
-    - Updated_Main_Data.xlsx
+b. Data/: Contains the input Excel files: Forcast.xlsx, Updated_Main_Data.xlsx
 
-c. src/
-  Contains source code modules:
-    - __init__.py – Initializes the package
-    - data_loader.py – Loads and cleans Excel data
-    - vectorizer.py – Implements TF-IDF vectorization
-    - retriever.py – Computes cosine similarity for retrieval
-    - llm_answer.py – Generates paragraph-style answers using an open-source LLM
-    - utils.py – Common preprocessing utilities
+c. src/: Contains source code modules:
+1. - __init__.py – Initializes the package
+2. - data_loader.py – Loads and cleans Excel data
+3. - vectorizer.py – Implements TF-IDF vectorization
+4. - retriever.py – Computes cosine similarity for retrieval
+5. - llm_answer.py – Generates paragraph-style answers using an open-source LLM
+6. - utils.py – Common preprocessing utilities
 
-d. streamlit_app.py
-  Main Streamlit UI for document upload and answering user queries.
+d. streamlit_app.py: Main Streamlit UI for document upload and answering user queries.
 
-e. requirements.txt
-  Lists all required Python packages and dependencies.
+e. requirements.txt: Lists all required Python packages and dependencies.
 
-f. README.md
-  Provides an overview, setup instructions, and usage guide for the project.
+f. README.md: Provides an overview, setup instructions, and usage guide for the project.
 
 
 
